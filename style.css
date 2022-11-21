@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(danny-howe-bn-D2bCvpik-unsplash.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 385px;
+    height: 180px;
+    border-radius: 20px;
+    transition: 0.5s ease-in-out;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+}
+
+.card:hover {
+    height: 401px;
+
+}
+
+.imgBx {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    left: 50%;
+    transform: translate(-50%);
+    top: -50px;
+    margin-top: 15px;
+    overflow: hidden;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(7.4px);
+    -webkit-backdrop-filter: blur(7.4px);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    transition: 0.5s ease-in-out;
+}
+
+.imgBx img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+
+.card:hover .imgBx {
+    width: 160px;
+    height: 160px;
+}
+
+.card .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+
+}
+
+.card .content .details {
+    padding: 1px;
+    margin: 20px;
+    align-items: center;
+    width: 100%;
+    transition: 0.5s ease-in-out;
+    transform: translateY(150px);
+
+}
+
+.card:hover .content .details {
+    transform: translateY(0px);
+}
+
+.card .content .details h2 {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    line-height: 1.2em;
+}
+
+.card .content .details h2 span {
+    font-size: 0.75em;
+    font-weight: 500;
+    opacity: 0.5;
+}
+
+.card .content .details .data {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0;
+
+}
+
+.card .content .details .data h3 {
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    line-height: 1em;
+    margin-right: -5px;
+    font-weight: 600;
+}
+
+.card .content .details .data h3 span {
+    font-size: 0.8em;
+    margin-right: 12px;
+    opacity: 0.5;
+    font-weight: 400;
+
+}
+
+.card .content .details .actionBtn {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.card .content .details .actionBtn button {
+    padding: 10px 30px;
+    font-size: 1em;
+    font-weight: 500;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.6px);
+    -webkit-backdrop-filter: blur(1.6px);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.card .content .details .actionBtn button :nth-child(2) {
+    /* From https://css.glass */
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(14.2px);
+    -webkit-backdrop-filter: blur(14.2px);
+    border: 1px solid rgba(0, 0, 0, 0.83);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+@media (max-width:992px) {
+    .card .content {
+        position: absolute;
+        width: 95%;
+        height: 65%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        overflow: visible;
+
+    }
+
+    .card .content .details {
+        transform: translateY(50px);
+    }
+
+    .card {
+        height: 260px;
+    }
+
+    .imgBx {
+        top: -80px;
+        height: 115px;
+    }
+
+    .card:hover {
+        height: 360px;
+        margin-bottom: 45px;
+        margin-top: 100px;
+
+    }
+
+    .card:hover .imgBx {
+        width: 140px;
+        height: 140px;
+    }
+
+}
