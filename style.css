@@ -48,16 +48,15 @@ body {
 .imgBx {
     position: absolute;
     width: 130px;
-    height: 130px;
+    height: 156px;
     left: 50%;
     transform: translate(-50%);
-    top: -50px;
+    top: -77px;
     margin-top: 15px;
     overflow: hidden;
-    /* From https://css.glass */
     background: rgba(255, 255, 255, 0.15);
     border-radius: 16px;
-    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 15px rgb(255 255 255 / 5%);
     backdrop-filter: blur(7.4px);
     -webkit-backdrop-filter: blur(7.4px);
     border: 1px solid rgba(255, 255, 255, 0.01);
@@ -91,9 +90,8 @@ body {
 }
 
 .card .content .details {
-    padding: 1px;
+    padding: 13px;
     margin: 20px;
-    align-items: center;
     width: 100%;
     transition: 0.5s ease-in-out;
     transform: translateY(150px);
